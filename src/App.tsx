@@ -9,6 +9,9 @@ import Greet from "./components/Greet"
 import Container from "./components/Container"
 import User from "./components/User"
 import Counter from "./components/Counter"
+import UserContextProvider from "./context/UserContextProvider"
+import Private from "./components/Private"
+import Profile from "./components/Profile"
 
 
 function App() {
@@ -27,8 +30,8 @@ function App() {
 
   return (
 
-    <>
-      <Container styles={{ backgroundColor: '#ddd', padding: 20, borderRadius: 20 }}>
+    <UserContextProvider>
+      <Container styles={{ padding: 20, borderRadius: 20 }}>
         <Heading>This is heading</Heading>
         <Greet name='joy'>
           <Heading>Hello greeting</Heading>
@@ -44,9 +47,12 @@ function App() {
         <div>
           <Counter></Counter>
         </div>
+        <div>
+          <Private isLoggedIn={true} component={Profile}></Private>
+        </div>
       </Container>
 
-    </>
+    </UserContextProvider>
   )
 }
 

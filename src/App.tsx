@@ -14,6 +14,7 @@ import Private from "./components/Private"
 import Profile from "./components/Profile"
 import List from "./components/List"
 import Restrictions from "./components/restrictions/Restrictions"
+import Toast from "./components/Toast"
 
 
 function App() {
@@ -59,7 +60,11 @@ function App() {
         <div>
           <Restrictions value={10} isPositive></Restrictions>
         </div>
+        <div>
+          <Toast position="center"></Toast>
+        </div>
       </Container>
+
 
     </UserContextProvider>
   )

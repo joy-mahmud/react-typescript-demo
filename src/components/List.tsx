@@ -4,7 +4,7 @@ type ListType<T> = {
     onClick: (value: T) => void
 }
 
-const List = <T extends {}>({ items, onClick }: ListType<T>) => {
+const List = <T,>({ items, onClick }: ListType<T>) => {
     return (
         <div>
             List:

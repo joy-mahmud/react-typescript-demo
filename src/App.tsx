@@ -13,6 +13,7 @@ import UserContextProvider from "./context/UserContextProvider"
 import Private from "./components/Private"
 import Profile from "./components/Profile"
 import List from "./components/List"
+import Restrictions from "./components/restrictions/Restrictions"
 
 
 function App() {
@@ -54,6 +55,9 @@ function App() {
         <div>
           <List items={[{ id: 1, name: "joy", age: 20 }, { name: 'jisan', age: 30 }, { name: 'sojib', age: 40 }]} onClick={(item) => console.log(`hello ${item}`)}></List>
           <List items={["joy", 'jisan', 'sojib']} onClick={(item) => console.log(`hello ${item}`)}></List>
+        </div>
+        <div>
+          <Restrictions value={10} isPositive></Restrictions>
         </div>
       </Container>
 

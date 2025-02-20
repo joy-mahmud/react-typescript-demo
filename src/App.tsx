@@ -15,6 +15,7 @@ import Profile from "./components/Profile"
 import List from "./components/List"
 import Restrictions from "./components/restrictions/Restrictions"
 import Toast from "./components/Toast"
+import CustomButton from "./components/html/Button"
 
 
 function App() {
@@ -60,9 +61,9 @@ function App() {
         <div>
           <Restrictions value={10} isPositive></Restrictions>
         </div>
-        <div>
-          <Toast position="center"></Toast>
-        </div>
+
+        <Toast position="center"></Toast>
+        <CustomButton variant="primary" onClick={() => console.log('button clicked')}>primary button</CustomButton>
       </Container>
 
 
